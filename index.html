@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Elite - Designed by Hash Pakhi</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Hind+Siliguri:wght@300;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <audio id="eidMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="bg-stars"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="main-title">Eid Mubarak</h1>
+            <p class="sub-title">E L I T E • G R O U P • P O R T A L</p>
+        </header>
+
+        <div class="glass-box">
+            <h3 class="section-title">ম্যাজিক ঈদ কার্ড জেনারেটর</h3>
+            <div class="input-group">
+                <input type="text" id="nameInput" placeholder="আপনার নাম লিখুন..." oninput="updateCard()">
+                <button class="btn-gold" onclick="downloadImage()">Download Card</button>
+            </div>
+
+            <div id="cardCanvas">
+                <div class="card-glow"></div>
+                <div class="moon-icon">🌙</div>
+                <div id="outputName">আপনার নাম</div>
+                <div class="eid-sub">EID AL FITR</div>
+                <div class="card-branding">Designed by Hash Pakhi</div>
+            </div>
+        </div>
+
+        <div class="glass-box">
+            <h3 class="section-title en-font">Salami Dashboard</h3>
+            <div class="salami-grid">
+                <div class="stat-item">
+                    <h4>পেলাম</h4>
+                    <p id="totalIn">৳ 0</p>
+                </div>
+                <div class="stat-item">
+                    <h4>দিলাম</h4>
+                    <p id="totalOut">৳ 0</p>
+                </div>
+            </div>
+            <div class="tracker-inputs">
+                <input type="number" id="salamiAmt" placeholder="৳ পরিমাণ">
+                <div class="btn-row">
+                    <button class="btn-gold sm" onclick="calcSalami('in')">In +</button>
+                    <button class="btn-gold sm dark" onclick="calcSalami('out')">Out -</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-btn" id="musicBtn" onclick="toggleMusic()">
+            <span id="musicIcon">🎵</span>
+        </div>
+
+        <footer>
+            <div class="branding">তৈরি করেছে: <span>হাস পাখি</span></div>
+            <p class="copy">© 2026 ELITE EXPERIENCE</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
